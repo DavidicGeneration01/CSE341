@@ -1,8 +1,8 @@
-const routes = require('express').Router();
-const lesson1Controller = require('../controllers/lesson1');
+const routes = require('express');
+const app = express();
 
-routes.get('/', lesson1Controller.wifeRoute);
-routes.get('/david', lesson1Controller.davidicRoute);
-routes.get('/Davidic', lesson1Controller.davidRoute);
+const port = process.env.PORT || 3000;
 
-module.exports = routes;
+app.use('/', require('./routes'));
+
+app.listen(port, () => {console.log(`Running on port ${port}`)});
