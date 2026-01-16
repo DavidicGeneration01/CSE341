@@ -1,8 +1,5 @@
-const routes = require('express');
-const app = express();
+const router = require('express').Router();
 
-const port = process.env.PORT || 3000;
+router.get('/', (req, res) => { res.send('Hello World!  ');});
 
-app.use('/', require('./routes'));
-
-app.listen(port, () => {console.log(`Running on port ${port}`)});
+module.exports = router;
