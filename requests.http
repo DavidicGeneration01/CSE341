@@ -1,0 +1,36 @@
+### REST Client Requests for CSE341 API
+
+# ==================================================
+# VARIABLES
+# ==================================================
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+# ==================================================
+# HOME ROUTE
+# ==================================================
+
+### Test Home Route
+GET {{baseUrl}}/
+
+# Expected: Returns "Hello World!"
+
+# ==================================================
+# USERS ROUTES
+# ==================================================
+
+### Get All Users
+GET {{baseUrl}}/users
+Content-Type: {{contentType}}
+
+# Expected: Returns array of all users from database
+
+### Get Single User by ID
+GET {{baseUrl}}/users/6483ce023f46080356e0c6d8
+Content-Type: {{contentType}}
+
+# Replace the ID above with an actual MongoDB ObjectId from your database
+# Expected: Returns array with single user object
+# Error: Returns empty array if ID doesn't exist
+
+
