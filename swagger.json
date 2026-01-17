@@ -5,9 +5,9 @@
     "description": "User Api",
     "version": "1.0.0"
   },
+  "host": "https://cse341-uzup.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
