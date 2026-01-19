@@ -54,17 +54,20 @@
             "schema": {
               "type": "object",
               "properties": {
+                "firstName": {
+                  "example": "John"
+                },
+                "lastName": {
+                  "example": "Doe"
+                },
                 "email": {
-                  "example": "any"
+                  "example": "john.doe@example.com"
                 },
-                "username": {
-                  "example": "any"
+                "favoriteColor": {
+                  "example": "blue"
                 },
-                "name": {
-                  "example": "any"
-                },
-                "ipaddress": {
-                  "example": "any"
+                "birthday": {
+                  "example": "1990-01-15"
                 }
               }
             }
@@ -80,7 +83,7 @@
         }
       }
     },
-    "/{id}": {
+    "/users/{id}": {
       "get": {
         "tags": [
           "Users"
@@ -121,17 +124,20 @@
             "schema": {
               "type": "object",
               "properties": {
+                "firstName": {
+                  "example": "John"
+                },
+                "lastName": {
+                  "example": "Doe"
+                },
                 "email": {
-                  "example": "any"
+                  "example": "john.doe@example.com"
                 },
-                "username": {
-                  "example": "any"
+                "favoriteColor": {
+                  "example": "blue"
                 },
-                "name": {
-                  "example": "any"
-                },
-                "ipaddress": {
-                  "example": "any"
+                "birthday": {
+                  "example": "1990-01-15"
                 }
               }
             }
@@ -157,27 +163,6 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "username": {
-                  "example": "any"
-                },
-                "name": {
-                  "example": "any"
-                },
-                "ipaddress": {
-                  "example": "any"
-                }
-              }
-            }
           }
         ],
         "responses": {
